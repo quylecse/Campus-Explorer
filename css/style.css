@@ -1,0 +1,95 @@
+/* Allgemeine Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Schrift, Abstand zwischen Zeilen, Hintergrund, Schriftfarbe, Abstand */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #000000; 
+    padding: 0 1rem;
+}
+
+header {
+    background-color: #222;
+    color: #ccc;;
+    color: white;
+    padding: 1rem 0;
+}
+
+/* Nutzung von Flexbox. ordnet Inhalt untereinander, zentriert elemente horizontal */
+#page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* entfernt die bulletpoints, gleichmäßiger Abstand zwischen Inhalten */
+#nav ul {
+    list-style: none; 
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Verwendung CSS Grid, Einteilung der Spalten */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+/* Bild passt sich immer dem Container an*/
+#campusmap img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 1rem;
+    text-align: center;
+}
+
+#footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Desktop-Ansicht - titel und menü nebeneinander  */
+@media (min-width: 960px) {
+    #page-title {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+}
+
+/*  Mobile-Ansicht - alles wird vertikel unttereinander dargestellt */
+@media (max-width: 600px) {
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #page-title {
+        align-items: flex-start;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
