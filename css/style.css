@@ -1,21 +1,25 @@
-/* Allgemeine Styles */
+/* Schrift, Abstand zwischen Zeilen, Hintergrund, Schriftfarbe, Abstand */
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #e5eaf5; 
+    color: #333;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+h1, h2 {
+    font-family: 'Merriweather', serif;
+    color: black; 
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-/* Schrift, Abstand zwischen Zeilen, Hintergrund, Schriftfarbe, Abstand */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #000000; 
-    padding: 0 1rem;
-}
 
 header {
-    background-color: #222;
-    color: #ccc;;
+    background-color: #9e7dc0; 
     color: white;
     padding: 1rem 0;
 }
@@ -28,7 +32,7 @@ header {
 }
 /* entfernt die bulletpoints, gleichmäßiger Abstand zwischen Inhalten */
 #nav ul {
-    list-style: none; 
+    list-style: none;
     display: flex;
     gap: 1rem;
     padding: 0;
@@ -40,23 +44,41 @@ header {
     font-weight: bold;
 }
 
-/* Verwendung CSS Grid, Einteilung der Spalten */
-main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-/* Bild passt sich immer dem Container an*/
-#campusmap img {
-    max-width: 100%;
-    height: auto;
+#nav a:hover {
+    color: #d0bdf4; 
 }
 
-footer {
-    background-color: #222;
-    color: #ccc;
+/* Verwendung von CSS Grid */
+main {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+    background-color: #e5eaf5; 
+}
+
+section {
+    background-color: #a0d2eb;
     padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+/* Bild passt sich immer dem Container an */
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
@@ -65,7 +87,7 @@ footer {
     padding: 0;
 }
 
-/* Desktop-Ansicht - titel und menü nebeneinander  */
+/* ===== Responsive: Desktop (ab 960px) ===== */
 @media (min-width: 960px) {
     #page-title {
         flex-direction: row;
@@ -74,7 +96,7 @@ footer {
     }
 }
 
-/*  Mobile-Ansicht - alles wird vertikel unttereinander dargestellt */
+/* ===== Responsive: Mobile (bis 600px) ===== */
 @media (max-width: 600px) {
     #nav ul {
         flex-direction: column;
