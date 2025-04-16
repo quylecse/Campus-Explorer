@@ -115,3 +115,48 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+
+#info-box {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: #fff;
+    border: 2px solid #c72e00;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    max-width: 800px;
+    z-index: 1000;
+    display:none;
+}
+#info-box img {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 6px;
+}
+#info-box button {
+    margin-top: 1rem;
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#info-box button:hover {
+    background-color: #c72e00;
+}
+
+.map-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+.map-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
