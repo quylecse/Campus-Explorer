@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="js/main.js"></script>
+    <script src="js/weather.js"></script>
     <title>Campus Explorer</title>
 </head>
 
 <!--body includiert header, main und footer-->
+
 <body>
-    
-    <header id = "header">
-        <div id = "page-title">
+
+    <header id="header">
+        <div id="page-title">
             <h1>Campus Explorer</h1>
+
         <nav id="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,11 +28,13 @@
                 <li><a href="#footer-nav">Über uns</a></li>
             </ul>
         </nav>    
+
         </div>
     </header>
- 
+
     <!--main ist der Hauptinhalt der Seite
         hier gibt es 3 Sections für interaktives Map und Weather Widget-->
+
     <main id = "maincontent">        
         <section id ="einführung">
             <p> Der Campus Linden der Hochschule Hannover liegt im Herzen des lebendigen Stadtteils Linden und ist ein zentraler Standort für Lehre, Forschung und studentisches Leben. </p>
@@ -46,24 +54,24 @@
             <div class="map-wrapper">
                 <img src="img/map_linden.jpg" alt="Campus-Karte">
             </div>
-              
-
 
         </section>
-        
-        <section id = "weather-widget">
+
+        <section id="weather-widget">
             <h2>Wetter</h2>
             <p>
-
-                Bleiben Sie immer auf dem Laufenden – mit unserem aktuellen Wetter-Widget für den Campus Linden!
+                Neben den informativen Inhalten bietet die Website auch aktuelle Wetterinformationen.
             </p>
-            
-            <p>
-                Egal ob Sie eine Vorlesung besuchen, eine Pause im Innenhof planen oder mit dem Fahrrad zur Hochschule kommen –
-                das Wetter-Widget zeigt Ihnen in Echtzeit die aktuellen Wetterbedingungen direkt auf dem Campus:
+            <ul>
+                <li>🌡️ Temperatur</li>
+                <li>🌬️ Windgeschwindigkeit</li>
+                <li>🌧️ Regenwahrscheinlichkeit</li>
+                <li>🌞 Wettervorhersage für die nächsten Stunden</li>
+            </ul>
+            <!--hier hängt das Weather widget-->
+            <p id="weatherStuff">
+                Hier hängt das Weather widget
             </p>
-           <!--hier hängt das Weather widget--> 
-
 
         </section>
         <script src="js/main.js"></script>
@@ -78,11 +86,10 @@
                     <li>Truong Minh Khoi Nguyen - 1764501</li>
                     <li>Eda Bakir - 1714611</li>
                     <li>Esther Grychtol - 1671627</li>
-                </ul>            
-        
-
+                </ul>
     </footer>
 
 
 </body>
+
 </html>
