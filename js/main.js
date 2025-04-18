@@ -71,25 +71,15 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target.id === "close-box") {
           infoBox.style.display = "none";
       }
-  });
-
-  //Wetterdaten 
-  fetch("https://wttr.in/Hannover?format=j1")
-      .then(response => response.json())
-      .then(data => {
-          const weatherSection = document.querySelector("#weather-widget");
-          const current = data.current_condition[0];
-          const weatherBox = document.createElement("div");
-          weatherBox.innerHTML = `
-              <h4>Aktuelles Wetter</h4>
-              <p>🌡️ Temperatur: ${current.temp_C} °C</p>
-              <p>💨 Wind: ${current.windspeedKmph} km/h</p>
-              <p>💧 Luftfeuchtigkeit : ${current.humidity} %</p>
-              <p>🌦️ Wetter: ${current.weatherDesc[0].value}</p>
-          `;
-          weatherSection.appendChild(weatherBox);
-      })
-      .catch(error => {
-          console.error("Wetterdaten konnten nicht geladen werden:", error);
-      });
+  }); 
 });
+
+"use strict";
+
+async function init() {
+    
+    fetchWeather();
+
+}
+
+window.onload = init;
