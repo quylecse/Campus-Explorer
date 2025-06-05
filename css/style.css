@@ -87,7 +87,7 @@ footer {
     padding: 0;
 }
 
-/* ===== Responsive: Desktop (ab 960px) ===== */
+/* Desktop (ab 960px)  */
 @media (min-width: 960px) {
     #page-title {
         flex-direction: row;
@@ -96,7 +96,7 @@ footer {
     }
 }
 
-/* ===== Responsive: Mobile (bis 600px) ===== */
+/* Mobile (bis 600px) */
 @media (max-width: 600px) {
     #nav ul {
         flex-direction: column;
